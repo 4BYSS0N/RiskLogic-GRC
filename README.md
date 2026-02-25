@@ -1,28 +1,35 @@
 # Sarthak Suman | Aspiring GRC Analyst
 **BCA (Hons.) Student | Google Cybersecurity Certified**
 
-Welcome to my GRC Portfolio. I specialize in the non-coding side of cybersecurity: 
-bridging the gap between technical security controls and business objectives.
+Welcome to my GRC Portfolio. I specialize in the non-coding aspects of cybersecurity, focusing on the alignment of technical security controls with business objectives and regulatory requirements.
 
 ---
 
-## 🛡️ GRC Case Studies
-*Real-world applications of security frameworks and privacy laws.*
-
-### 1. [Privacy-by-Design: Zero-Knowledge Age Verification](https://github.com/4BBYSON/RiskLogic-GRC/tree/Projects/04-Case-Studies/ZKP-Age-Token)
-* **Goal:** Achieve technical compliance with India's **DPDP Act 2023** and **EU GDPR**.
-* **GRC Focus:** Data Minimization and Privacy Engineering.
-* **Outcome:** Developed a PoC that verifies user age without collecting or storing sensitive PII (Personally Identifiable Information).
-
-  ---
-  
-### 2-Year Roadmap
+## 2-Year Roadmap
 - [x] Google Cybersecurity Professional Certificate
 - [ ] CompTIA Security+ (Target: Dec 2026)
 - [ ] ISO 27001 Internal Auditor Training (Target: 2027)
 
-### Core Competencies
-* Risk Assessment (NIST SP 800-30)
-* Policy Development (ISO 27001)
-* Privacy Compliance (DPDP Act India / GDPR)
-* Security Awareness Training
+---
+
+## GRC Case Study
+*Real-world applications of security frameworks and privacy laws.*
+
+### [Privacy-by-Design: Zero-Knowledge Age Verification](https://github.com/4BBYSON/RiskLogic-GRC/tree/Projects/04-Case-Studies/ZKP-Age-Token)
+* **Objective:** Achieve technical compliance with India's Digital Personal Data Protection (DPDP) Act 2023 and the EU GDPR.
+* **GRC Focus:** Data Minimization, Privacy Engineering, and Risk Mitigation.
+* **Outcome:** Developed a Proof-of-Concept (PoC) that cryptographically verifies user age without the collection, transmission, or storage of sensitive Personally Identifiable Information (PII).
+
+---
+
+## Core Competencies
+* **Risk Management:** Asset Identification and Scoring using NIST SP 800-30.
+* **Governance:** Security Policy Development aligned with ISO 27001 standards.
+* **Compliance:** Regulatory mapping for India DPDP Act 2023 and EU GDPR.
+* **Audit:** Internal Control Testing and Remediation Planning.
+
+---
+
+## Contact Information
+* **LinkedIn:** https://www.linkedin.com/in/sarthak-suman/
+* **Email:** sumansarthak47@gmail.com
