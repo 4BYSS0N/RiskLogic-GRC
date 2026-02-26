@@ -57,7 +57,7 @@ A significant driver for this assessment was ensuring compliance with the **Digi
 ---
 
 ## 🚀 Live Interactive Visualization
-[**View Interactive Risk Dashboard**](https://riskvectorx.github.io/RiskLogic-GRC/Project-1-Risk-Register/Enterprise_Risk_Infographic.html)
+[**View Interactive Risk Dashboard**](https://riskvectorx.github.io/RiskLogic-GRC/Project-1-Risk-Register/Interactive_Dashboard.html)
 
 
 ---
