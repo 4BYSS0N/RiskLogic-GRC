@@ -37,5 +37,5 @@ Welcome to my GRC Portfolio. I specialize in the non-coding aspects of cybersecu
 ---
 
 ## Contact Information
-* **LinkedIn:** https://www.linkedin.com/in/sarthak-suman/
-* **Email:** sumansarthak47@gmail.com
+* **LinkedIn:** [Sarthak Suman](https://www.linkedin.com/in/sarthak-suman/)
+* **Email:** [Sarthak Suman](sumansarthak47@gmail.com)
