@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Risk Landscape | ShopLogic India</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Embedded Palette & Design Config -->
+    <!-- 
+        Palette: Vibrant Professional (Blue/Indigo/Rose/Emerald)
+        Primary: #4338ca (Indigo-700)
+        Secondary: #3b82f6 (Blue-500)
+        Accent (High Risk): #e11d48 (Rose-600)
+        Success (Low Risk): #10b981 (Emerald-500)
+        Background: #f8fafc (Slate-50)
+        
+        Plan:
+        1. Intro/Hook: Context of ShopLogic India & NIST 800-30.
+        2. Dashboard: Key Metrics (Avg Risk Reduction).
+        3. Visual 1: Inherent vs Residual Risk (Bar Chart) - Goal: Compare.
+        4. Visual 2: Threat Landscape (Doughnut) - Goal: Inform/Composition.
+        5. Visual 3: Asset Vulnerability Ranking (Horizontal Bar) - Goal: Organize/Rank.
+        6. Process: Mitigation Lifecycle (CSS Flow) - Goal: Organize.
+        7. Data Table: The Detailed Register.
+    -->
+
+    <style>
+        /* Custom Chart Container Styling as per requirements */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px; /* Max width to prevent excessive stretching */
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px; /* Base height */
+            max-height: 400px;
+        }
+
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+
+        /* Custom Scrollbar for a polished feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4338ca; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3730a3; 
+        }
+
+        /* Card Hover Effects */
+        .hover-lift {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- Header Section -->
+    <header class="bg-indigo-700 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div>
+                <h1 class="text-2xl font-bold tracking-tight">ShopLogic India</h1>
+                <p class="text-indigo-200 text-sm">Enterprise Risk Management Dashboard (NIST SP 800-30)</p>
+            </div>
+            <div class="hidden md:block text-right text-xs text-indigo-200">
+                <p>Status: <span class="text-white font-semibold">Active Assessment</span></p>
+                <p>Framework: <span class="text-white font-semibold">ISO 27001 / DPDP Act</span></p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Wrapper -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+
+        <!-- Introduction Section -->
+        <section class="bg-white rounded-xl shadow-md p-8 border-l-4 border-indigo-600">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Risk Assessment Executive Summary</h2>
+            <p class="text-lg text-gray-600 leading-relaxed">
+                As part of our strategic roadmap for <strong>ShopLogic India</strong>, we have conducted a comprehensive risk assessment utilizing the <strong>NIST SP 800-30 Revision 1</strong> framework. This assessment identifies critical vulnerabilities within our digital infrastructure, ranging from Customer PII databases to cloud storage configurations.
+            </p>
+            <p class="mt-4 text-gray-600">
+                The analysis reveals a high inherent risk posture due to rapid digital expansion. However, through targeted mitigation strategies—specifically focusing on <strong>Identity Access Management (MFA)</strong> and <strong>Data Encryption</strong>—we project a significant reduction in our residual risk profile, aligning with the <strong>DPDP Act 2023</strong> compliance mandates.
+            </p>
+        </section>
+
+        <!-- KPI Cards Section (Goal: Inform) -->
+        <!-- No SVG used. Using text styling for impact. -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-md hover-lift border-t-4 border-rose-500">
+                <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Highest Inherent Risk</p>
+                <div class="mt-2 flex items-baseline">
+                    <span class="text-5xl font-extrabold text-gray-900">9.0</span>
+                    <span class="ml-2 text-sm text-rose-600 font-medium">Critical</span>
+                </div>
+                <p class="mt-2 text-sm text-gray-600">Identified in Customer PII Database (Lack of MFA).</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md hover-lift border-t-4 border-emerald-500">
+                <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Avg. Risk Reduction</p>
+                <div class="mt-2 flex items-baseline">
+                    <span class="text-5xl font-extrabold text-gray-900">68%</span>
+                    <span class="ml-2 text-sm text-emerald-600 font-medium">Projected</span>
+                </div>
+                <p class="mt-2 text-sm text-gray-600">Reduction in risk scores post-mitigation.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md hover-lift border-t-4 border-blue-500">
+                <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Key Assets Scoped</p>
+                <div class="mt-2 flex items-baseline">
+                    <span class="text-5xl font-extrabold text-gray-900">5</span>
+                    <span class="ml-2 text-sm text-blue-600 font-medium">Core Systems</span>
+                </div>
+                <p class="mt-2 text-sm text-gray-600">PII DB, Payments, Cloud, Laptops, Servers.</p>
+            </div>
+        </section>
+
+        <!-- Chart Section 1: Inherent vs Residual (Goal: Compare) -->
+        <section class="bg-white rounded-xl shadow-md p-6">
+            <div class="mb-6 border-b border-gray-100 pb-4">
+                <h3 class="text-xl font-bold text-gray-900">Control Effectiveness Analysis</h3>
+                <p class="text-gray-500 text-sm mt-1">Comparing <strong>Inherent Risk</strong> (Before Controls) vs. <strong>Residual Risk</strong> (After Controls). High bars indicate significant exposure; the gap represents the value of our security investments.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Text Context -->
+                <div class="lg:col-span-1 space-y-4">
+                    <div class="bg-rose-50 p-4 rounded-lg border border-rose-100">
+                        <h4 class="font-bold text-rose-700 text-sm mb-1">Critical Focus Area</h4>
+                        <p class="text-xs text-rose-900">
+                            <strong>RR-001 (Customer PII)</strong> shows the most dramatic reduction (9 to 2). Implementing FIDO2 MFA effectively neutralizes the "Likelihood" of credential-based attacks.
+                        </p>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                        <h4 class="font-bold text-blue-700 text-sm mb-1">Strategic Shift</h4>
+                        <p class="text-xs text-blue-900">
+                            We are moving from "Reactive" controls to "Preventative" measures like Immutable Backups and WAF deployment.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Chart Container -->
+                <div class="lg:col-span-2">
+                    <div class="chart-container">
+                        <canvas id="riskComparisonChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chart Section 2: Threat Landscape (Goal: Inform/Composition) -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Threat Source Composition</h3>
+                <p class="text-gray-500 text-sm mb-6">Breakdown of identified threat actors targeting ShopLogic's infrastructure.</p>
+                
+                <div class="chart-container">
+                    <canvas id="threatSourceChart"></canvas>
+                </div>
+                
+                <p class="text-xs text-center text-gray-400 mt-4">Data Source: Internal Audit Q1 2026</p>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md p-6 flex flex-col justify-center">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Mitigation Strategy Flow</h3>
+                <p class="text-gray-500 text-sm mb-6">The standard operating procedure (SOP) for handling high-impact risks.</p>
+
+                <!-- CSS Process Flow (NO MERMAID, NO SVG) -->
+                <div class="space-y-4">
+                    <!-- Step 1 -->
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 h-10 w-10 rounded-full bg-rose-100 flex items-center justify-center text-rose-600 font-bold border-2 border-rose-200">1</div>
+                        <div class="ml-4 bg-gray-50 p-3 rounded-lg w-full border-l-4 border-rose-500">
+                            <h4 class="font-bold text-gray-800 text-sm">Identify & Assess</h4>
+                            <p class="text-xs text-gray-600">Map Asset (e.g., PII DB) to Threat (Cybercriminal).</p>
+                        </div>
+                    </div>
+                    <!-- Arrow -->
+                    <div class="flex justify-start ml-5 h-6 border-l-2 border-dashed border-gray-300"></div>
+                    <!-- Step 2 -->
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold border-2 border-indigo-200">2</div>
+                        <div class="ml-4 bg-gray-50 p-3 rounded-lg w-full border-l-4 border-indigo-500">
+                            <h4 class="font-bold text-gray-800 text-sm">Select Control</h4>
+                            <p class="text-xs text-gray-600">Apply NIST Controls (e.g., IA-2 Identification & Authentication).</p>
+                        </div>
+                    </div>
+                    <!-- Arrow -->
+                    <div class="flex justify-start ml-5 h-6 border-l-2 border-dashed border-gray-300"></div>
+                    <!-- Step 3 -->
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 h-10 w-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold border-2 border-emerald-200">3</div>
+                        <div class="ml-4 bg-gray-50 p-3 rounded-lg w-full border-l-4 border-emerald-500">
+                            <h4 class="font-bold text-gray-800 text-sm">Monitor Residual Risk</h4>
+                            <p class="text-xs text-gray-600">Ensure risk drops to "Low" (Score 1-2).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Data Table Section -->
+        <section class="bg-white rounded-xl shadow-md overflow-hidden">
+            <div class="p-6 border-b border-gray-100 bg-gray-50">
+                <h3 class="text-lg font-bold text-gray-900">Detailed Risk Register Artifact</h3>
+                <p class="text-sm text-gray-500">Full extract from the GRC documentation.</p>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Asset</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Vulnerability</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Score (Pre)</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Mitigation Plan</th>
+                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Score (Post)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200 text-sm">
+                        <!-- RR-001 -->
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 whitespace-nowrap font-mono text-gray-500">RR-001</td>
+                            <td class="px-6 py-4 font-medium text-gray-900">Customer PII DB</td>
+                            <td class="px-6 py-4 text-gray-600">Lack of MFA</td>
+                            <td class="px-6 py-4"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-rose-100 text-rose-800">9 (Critical)</span></td>
+                            <td class="px-6 py-4 text-gray-600">Implement FIDO2 MFA</td>
+                            <td class="px-6 py-4"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-emerald-100 text-emerald-800">2 (Low)</span></td>
+                        </tr>
+                        <!-- RR-002 -->
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 whitespace-nowrap font-mono text-gray-500">RR-002</td>
+                            <td class="px-6 py-4 font-medium text-gray-900">Payment Gateway</td>
+                            <td class="px-6 py-4 text-gray-600">Unpatched API</td>
+                            <td class="px-6 py-4"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-orange-100 text-orange-800">6 (High)</span></td>
+                            <td class="px-6 py-4 text-gray-600">WAF & Patch Mgmt</td>
+                            <td class="px-6 py-4"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">3 (Med)</span></td>
+                        </tr>
+                        <!-- RR-003 -->
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 whitespace-nowrap font-mono text-gray-500">RR-003</td>
+                            <td class="px-6 py-4 font-medium text-gray-900">Cloud Storage</td>
+                            <td class="px-6 py-4 text-gray-600">Public Access</td>
+                            <td class="px-6 py-4"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-orange-100 text-orange-800">6 (High)</span></td>
+                            <td class="px-6 py-4 text-gray-600">Config Monitoring</td>
+                            <td class="px-6 py-4"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-emerald-100 text-emerald-800">2 (Low)</span></td>
+                        </tr>
+                         <!-- RR-004 -->
+                         <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4 whitespace-nowrap font-mono text-gray-500">RR-004</td>
+                            <td class="px-6 py-4 font-medium text-gray-900">Emp. Laptops</td>
+                            <td class="px-6 py-4 text-gray-600">Unencrypted Drives</td>
+                            <td class="px-6 py-4"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">4 (Med)</span></td>
+                            <td class="px-6 py-4 text-gray-600">Full Disk Encryption</td>
+                            <td class="px-6 py-4"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-emerald-100 text-emerald-800">1 (Low)</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-gray-400 text-sm py-8">
+            <p>&copy; 2026 ShopLogic India GRC Team. Generated for Internal Audit.</p>
+        </footer>
+    </main>
+
+    <!-- Chart Logic Script -->
+    <script>
+        // --- DATA PREPARATION ---
+        
+        // Raw Data from Risk Register CSV
+        const riskData = [
+            { id: 'RR-001', asset: 'Customer PII Database', threat: 'Cybercriminal', scorePre: 9, scorePost: 2 },
+            { id: 'RR-002', asset: 'Payment Gateway', threat: 'Software Exploit', scorePre: 6, scorePost: 3 },
+            { id: 'RR-003', asset: 'Cloud Storage (S3)', threat: 'Misconfiguration', scorePre: 6, scorePost: 2 },
+            { id: 'RR-004', asset: 'Employee Laptops', threat: 'Theft / Loss', scorePre: 4, scorePost: 1 },
+            { id: 'RR-005', asset: 'Production Server', threat: 'Ransomware', scorePre: 6, scorePost: 2 }
+        ];
+
+        // Helper Function: 16-Char Label Wrapping
+        function processLabel(label) {
+            if (label.length <= 16) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                if ((currentLine + ' ' + words[i]).length <= 16) {
+                    currentLine += ' ' + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        // Processed Labels for Charts
+        const assetLabels = riskData.map(d => processLabel(d.asset));
+        const inherentScores = riskData.map(d => d.scorePre);
+        const residualScores = riskData.map(d => d.scorePost);
+
+        // --- GLOBAL CHART CONFIG ---
+        
+        // Tooltip Callback for Multi-line Labels (Mandatory Requirement)
+        const tooltipConfig = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) {
+                        return label.join(' ');
+                    } else {
+                        return label;
+                    }
+                }
+            }
+        };
+
+        // --- CHART 1: INHERENT VS RESIDUAL RISK (Bar) ---
+        const ctxComparison = document.getElementById('riskComparisonChart').getContext('2d');
+        new Chart(ctxComparison, {
+            type: 'bar',
+            data: {
+                labels: assetLabels,
+                datasets: [
+                    {
+                        label: 'Inherent Risk (Pre-Mitigation)',
+                        data: inherentScores,
+                        backgroundColor: '#e11d48', // Rose-600
+                        borderRadius: 4,
+                    },
+                    {
+                        label: 'Residual Risk (Post-Mitigation)',
+                        data: residualScores,
+                        backgroundColor: '#10b981', // Emerald-500
+                        borderRadius: 4,
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom' },
+                    tooltip: tooltipConfig,
+                    title: { display: false }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 9,
+                        title: { display: true, text: 'Risk Score (NIST 800-30)' }
+                    },
+                    x: {
+                        ticks: { autoSkip: false }
+                    }
+                }
+            }
+        });
+
+        // --- CHART 2: THREAT SOURCE DISTRIBUTION (Doughnut) ---
+        // Aggregate threat sources
+        const threatCounts = {};
+        riskData.forEach(d => {
+            const threat = d.threat;
+            threatCounts[threat] = (threatCounts[threat] || 0) + 1;
+        });
+        
+        // Process labels for Donut chart (using same wrapping logic just in case)
+        const threatLabels = Object.keys(threatCounts).map(l => processLabel(l));
+        const threatValues = Object.values(threatCounts);
+
+        const ctxThreat = document.getElementById('threatSourceChart').getContext('2d');
+        new Chart(ctxThreat, {
+            type: 'doughnut',
+            data: {
+                labels: threatLabels,
+                datasets: [{
+                    data: threatValues,
+                    backgroundColor: [
+                        '#4338ca', // Indigo
+                        '#3b82f6', // Blue
+                        '#06b6d4', // Cyan
+                        '#f59e0b', // Amber
+                        '#ef4444'  // Red
+                    ],
+                    borderWidth: 0,
+                    hoverOffset: 10
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'right' },
+                    tooltip: tooltipConfig
+                },
+                layout: {
+                    padding: 10
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>
