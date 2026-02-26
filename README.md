@@ -15,7 +15,7 @@ Welcome to my GRC Portfolio. I specialize in the non-coding aspects of cybersecu
 ## GRC Case Study
 *Real-world applications of security frameworks and privacy laws.*
 
-### [Privacy-by-Design: Zero-Knowledge Age Verification](https://github.com/4BBYSON/RiskLogic-GRC/tree/Projects/04-Case-Studies/ZKP-Age-Token)
+### [Privacy-by-Design: Zero-Knowledge Age Verification](https://github.com/RiskVectorX/RiskLogic-GRC/tree/Projects/04-Case-Studies/ZKP-Age-Token)
 * **Objective:** Achieve technical compliance with India's Digital Personal Data Protection (DPDP) Act 2023 and the EU GDPR.
 * **GRC Focus:** Data Minimization, Privacy Engineering, and Risk Mitigation.
 * **Outcome:** Developed a Proof-of-Concept (PoC) that cryptographically verifies user age without the collection, transmission, or storage of sensitive Personally Identifiable Information (PII).
