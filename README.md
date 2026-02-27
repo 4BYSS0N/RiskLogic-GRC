@@ -26,12 +26,12 @@ Welcome to my GRC Portfolio. I specialize in the non-coding aspects of cybersecu
 * **GRC Focus:** Data Minimization, Privacy Engineering, and Risk Mitigation.
 * **Outcome:** Developed a Proof-of-Concept (PoC) that cryptographically verifies user age without the collection, transmission, or storage of sensitive Personally Identifiable Information (PII).
   
-### 3. [Project 3: ISO 27001 Policy Framework](https://github.com/RiskVectorX/RiskLogic-GRC/tree/Projects/Project-3-ISO-27001-Policies)
+### 3. [ISO 27001 Policy Framework](https://github.com/RiskVectorX/RiskLogic-GRC/tree/Projects/Project-3-ISO-27001-Policies)
 * **Objective:** Establish foundational security governance for a fintech startup.
 * **GRC Focus:** ISMS Documentation, Access Control, and Incident Response.
 * **Outcome:** Created a suite of 3 core policies aligned with ISO 27001:2022.
 
-### 4. [Project 4: DPDP Act 2023 Gap Analysis & Compliance Report](https://github.com/RiskVectorX/RiskLogic-GRC/tree/Projects/Project-4-DPDP-Gap-Analysis)
+### 4. [DPDP Act 2023 Gap Analysis & Compliance Report](https://github.com/RiskVectorX/RiskLogic-GRC/tree/Projects/Project-4-DPDP-Gap-Analysis)
 
 * **Objective:** The primary objective of this project was to perform a comprehensive audit of **ShopLogic India** (a fictional e-commerce Data Fiduciary) against the mandates of India's **Digital Personal Data Protection (DPDP) Act 2023**. This analysis bridges the gap between legal requirements and technical implementation.
 
