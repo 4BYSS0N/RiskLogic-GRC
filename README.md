@@ -34,11 +34,9 @@ Welcome to my GRC Portfolio. I specialize in the non-coding aspects of cybersecu
 ### 4. [DPDP Act 2023 Gap Analysis & Compliance Report](https://github.com/RiskVectorX/RiskLogic-GRC/tree/Projects/Project-4-DPDP-Gap-Analysis)
 
 * **Objective:** The primary objective of this project was to perform a comprehensive audit of **ShopLogic India** (a fictional e-commerce Data Fiduciary) against the mandates of India's **Digital Personal Data Protection (DPDP) Act 2023**. This analysis bridges the gap between legal requirements and technical implementation.
-
 * **GRC Focus:**
-* **Regulatory Mapping:** Translating specific legal sections (Sections 5-14) into actionable technical requirements.
-* **Gap Identification:** Conducting a cross-functional audit of data collection, storage, and processing workflows.
-
+  **Regulatory Mapping:** Translating specific legal sections (Sections 5-14) into actionable technical requirements.
+  **Gap Identification:** Conducting a cross-functional audit of data collection, storage, and processing workflows.
 * **Outcome:** The audit successfully identified several critical compliance gaps, most notably in **consent architecture** (Section 6) and **minor data processing** (Section 9). By identifying these vulnerabilities and providing a structured remediation roadmap, this project demonstrates how to mitigate significant legal and financial risks, including potential penalties of up to **₹250 Crore**.
 ---
 
