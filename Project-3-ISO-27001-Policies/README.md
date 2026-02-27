@@ -36,9 +36,9 @@ The framework is built around three critical pillars of the **ISO 27001:2022** s
 ---
 
 ##  Key Artifacts in this Folder
-- [ ] `Acceptable_Use_Policy.md`: Behavioral standards and asset handling rules for all personnel.
-- [ ] `Access_Control_Policy.md`: Governance for the logical and physical access lifecycle (Joiners, Movers, Leavers).
-- [ ] `Incident_Response_Policy.md`: Tactical playbook for the identification, containment, and recovery from security incidents.
+-  `Acceptable_Use_Policy.md`: Behavioral standards and asset handling rules for all personnel.
+-  `Access_Control_Policy.md`: Governance for the logical and physical access lifecycle (Joiners, Movers, Leavers).
+-  `Incident_Response_Policy.md`: Tactical playbook for the identification, containment, and recovery from security incidents.
 
 ---
-**Developed by Sarthak Suman (RiskVectorX)** *Senior GRC Analyst Portfolio*
+**Developed by Sarthak Suman (RiskVectorX)** *GRC Analyst Portfolio*
